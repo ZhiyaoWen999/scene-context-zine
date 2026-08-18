@@ -1,0 +1,68 @@
+{
+  "route": "graphic-scene-poster",
+  "reference_mode": "edit-source",
+  "scene_core": {
+    "identity_anchors": [
+      "stone church tower",
+      "distant blue ridge",
+      "foreground roofline",
+      "single cloud opening"
+    ],
+    "spatial_invariants": [
+      "the church tower rises just below the ridge opening and remains smaller than the mountain mass"
+    ],
+    "context_bearing_regions": [
+      "ridge-to-sky boundary",
+      "stone city roof texture around the tower"
+    ],
+    "environmental_palette": {
+      "background_base": "hazy blue-gray sky",
+      "midtone": "warm gray stone city",
+      "dark_anchor": "charcoal foreground roof",
+      "light_temperature": "cool high-altitude daylight",
+      "meaningful_accent": "muted blue ridge"
+    },
+    "light_time": [
+      "diffuse cool daylight through a single brighter cloud opening"
+    ],
+    "material_signatures": [
+      "weathered stone",
+      "hazy atmosphere",
+      "dark roof tile"
+    ],
+    "density_character": "monumental over dense city texture",
+    "memory_cues": [
+      "tower aligned with the mountain gap"
+    ],
+    "detail_map": {
+      "preserve": [
+        "tower silhouette",
+        "mountain gap",
+        "foreground roof angle"
+      ],
+      "compress": [
+        "repeated city roofs"
+      ],
+      "omit": [
+        "indistinct distant antennas"
+      ],
+      "do_not_invent": [
+        "place name, flags, extra mountains, vivid color"
+      ]
+    },
+    "flexible_zones": [
+      "city roof repetition away from the tower",
+      "upper sky margin"
+    ]
+  },
+  "field_tone_mode": "material-continuation",
+  "palette_mode": "source-amplification",
+  "abstraction_level": "medium",
+  "photo_share": 0.58,
+  "introduced_hues": 0,
+  "typography": {
+    "mode": "none",
+    "text": ""
+  },
+  "final_generation_prompt": "Edit the attached source as a graphic scene poster. Keep the church tower, ridge gap, roof angle, cool daylight, and stone city photographic; enlarge the existing hazy blue ridge plane to create the hierarchy without adding a new hue."
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "场景语境纸刊 · Scene Context Zine"
+  short_description: "保留场景 DNA、可切换构图与材质路线的照片纸刊生成器"
+  default_prompt: "Use $scene-context-zine to transform this photo while preserving its context, then choose the most suitable composition route."

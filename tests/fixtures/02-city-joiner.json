@@ -1,0 +1,70 @@
+{
+  "route": "multi-frame-joiner",
+  "reference_mode": "edit-source",
+  "scene_core": {
+    "identity_anchors": [
+      "walking figure in red coat",
+      "vertical blue shop sign",
+      "tram rail curve",
+      "weathered stone storefront"
+    ],
+    "spatial_invariants": [
+      "the figure moves rightward along the rail curve beneath the blue sign"
+    ],
+    "context_bearing_regions": [
+      "stone storefront and blue sign",
+      "wet rail and pavement reflection"
+    ],
+    "environmental_palette": {
+      "background_base": "cool gray stone",
+      "midtone": "wet blue-gray pavement",
+      "dark_anchor": "deep storefront openings",
+      "light_temperature": "overcast cool daylight",
+      "meaningful_accent": "source red coat"
+    },
+    "light_time": [
+      "soft overcast light with wet reflective pavement"
+    ],
+    "material_signatures": [
+      "weathered stone",
+      "wet asphalt",
+      "steel tram rail",
+      "painted shop sign"
+    ],
+    "density_character": "layered and directional",
+    "memory_cues": [
+      "red coat crossing the rail curve",
+      "blue vertical sign"
+    ],
+    "detail_map": {
+      "preserve": [
+        "figure direction",
+        "sign-to-storefront relationship",
+        "rail reflection"
+      ],
+      "compress": [
+        "repeated upper windows"
+      ],
+      "omit": [
+        "small pavement litter"
+      ],
+      "do_not_invent": [
+        "new storefront names, extra pedestrians, alternate camera viewpoints"
+      ]
+    },
+    "flexible_zones": [
+      "upper façade rhythm",
+      "pavement at the bottom edge"
+    ]
+  },
+  "field_tone_mode": "source-tone",
+  "palette_mode": "source-amplification",
+  "abstraction_level": "light",
+  "photo_share": 0.78,
+  "introduced_hues": 0,
+  "typography": {
+    "mode": "none",
+    "text": ""
+  },
+  "final_generation_prompt": "Edit the attached source into a multi-frame photographic assembly using only faithful source crops. Keep the walking figure intact in the largest fragment and reconstruct the tram rail curve, blue sign, stone façade, and wet-pavement light across overlapping edges."
+}

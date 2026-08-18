@@ -1,0 +1,70 @@
+{
+  "route": "gathered-collage",
+  "reference_mode": "edit-source",
+  "scene_core": {
+    "identity_anchors": [
+      "child in rust winter coat",
+      "low wooden bridge",
+      "snow-covered reeds",
+      "dark water reflection"
+    ],
+    "spatial_invariants": [
+      "the child remains centered on the low bridge above the dark horizontal water reflection"
+    ],
+    "context_bearing_regions": [
+      "snow-reed bank behind the bridge",
+      "dark water band below the bridge"
+    ],
+    "environmental_palette": {
+      "background_base": "cool blue-white snow",
+      "midtone": "soft gray reeds and bridge wood",
+      "dark_anchor": "charcoal water reflection",
+      "light_temperature": "diffuse cold winter daylight",
+      "meaningful_accent": "source rust-orange coat"
+    },
+    "light_time": [
+      "flat diffuse winter daylight with luminous snow"
+    ],
+    "material_signatures": [
+      "powdery snow",
+      "weathered wood",
+      "dark still water",
+      "dry reeds"
+    ],
+    "density_character": "sparse with a textured reed band",
+    "memory_cues": [
+      "rust coat against blue-white snow",
+      "child's small scale on the bridge"
+    ],
+    "detail_map": {
+      "preserve": [
+        "child silhouette and coat color",
+        "bridge-water relationship",
+        "snow light"
+      ],
+      "compress": [
+        "individual reed stalks into two directional clusters"
+      ],
+      "omit": [
+        "tiny snow specks in the far bank"
+      ],
+      "do_not_invent": [
+        "new footprints, trees, animals, saturated print hue"
+      ]
+    },
+    "flexible_zones": [
+      "outer reed edges",
+      "far snow bank"
+    ]
+  },
+  "field_tone_mode": "source-tone",
+  "palette_mode": "native",
+  "abstraction_level": "medium",
+  "photo_share": 0.48,
+  "introduced_hues": 0,
+  "typography": {
+    "mode": "authored-phrase",
+    "text": "雪落得很轻"
+  },
+  "final_generation_prompt": "Edit the attached source as a flat tactile paper collage. Keep the child, low bridge, snow bank, dark water, cold light, and rust coat truthful; use one irregular fibrous handoff and continue only the real reed direction as two quiet paper-cut clusters."
+}

@@ -1,0 +1,33 @@
+{
+  "route": "gathered-collage",
+  "reference_mode": "prompt-only",
+  "scene_core": {
+    "identity_anchors": ["person"],
+    "spatial_invariants": [],
+    "context_bearing_regions": [],
+    "environmental_palette": {
+      "background_base": "",
+      "midtone": "beige"
+    },
+    "light_time": [],
+    "material_signatures": ["paper"],
+    "density_character": "",
+    "memory_cues": [],
+    "detail_map": {
+      "preserve": [],
+      "compress": [],
+      "omit": []
+    },
+    "flexible_zones": []
+  },
+  "field_tone_mode": "neutral-paper",
+  "palette_mode": "native",
+  "abstraction_level": "high",
+  "photo_share": 0.10,
+  "introduced_hues": 2,
+  "typography": {
+    "mode": "provided",
+    "text": ""
+  },
+  "final_generation_prompt": "Make it in the style of David Hockney and Rodchenko on generic cream paper."
+}

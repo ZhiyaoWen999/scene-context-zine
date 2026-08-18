@@ -1,0 +1,70 @@
+{
+  "route": "documentary-editorial",
+  "reference_mode": "edit-source",
+  "scene_core": {
+    "identity_anchors": [
+      "seated reader in the left half",
+      "white tabletop and ceramic cup",
+      "walnut-brown wall",
+      "cold daylight window",
+      "small pendant lamp"
+    ],
+    "spatial_invariants": [
+      "the reader remains seated at the table with the cold window behind and to the right"
+    ],
+    "context_bearing_regions": [
+      "walnut wall across the upper-left background",
+      "cold translucent window plane on the right"
+    ],
+    "environmental_palette": {
+      "background_base": "warm medium walnut brown",
+      "midtone": "soft tan wood and skin tones",
+      "dark_anchor": "near-black chair and clothing",
+      "light_temperature": "warm amber interior light against cool window daylight",
+      "meaningful_accent": "muted forest green plant"
+    },
+    "light_time": [
+      "soft amber pendant light mixes with cool lateral daylight"
+    ],
+    "material_signatures": [
+      "walnut wall panel",
+      "white stone tabletop",
+      "window glass",
+      "ceramic cup"
+    ],
+    "density_character": "layered but calm",
+    "memory_cues": [
+      "cup directly below the reader's hand",
+      "small plant near the window"
+    ],
+    "detail_map": {
+      "preserve": [
+        "cup-hand relationship",
+        "window and wall color-temperature contrast"
+      ],
+      "compress": [
+        "repeated chairs in the far background"
+      ],
+      "omit": [
+        "minor reflection noise on the tabletop"
+      ],
+      "do_not_invent": [
+        "shop name, date, extra people, bright accent color"
+      ]
+    },
+    "flexible_zones": [
+      "far-right chair repetition",
+      "small ceiling margin"
+    ]
+  },
+  "field_tone_mode": "material-continuation",
+  "palette_mode": "native",
+  "abstraction_level": "light",
+  "photo_share": 0.84,
+  "introduced_hues": 0,
+  "typography": {
+    "mode": "none",
+    "text": ""
+  },
+  "final_generation_prompt": "Edit the attached source photograph as a source-faithful editorial page. Preserve the walnut wall, cool window, white table, mixed light, and cup-hand relationship; continue only the existing wall material into a restrained margin."
+}
