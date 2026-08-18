@@ -11,7 +11,9 @@
 7. Palette modes
 8. Abstraction levels
 9. Material and typography modules
-10. JSON plan contract
+10. Transformation-floor fields
+11. Source-information translation fields
+12. JSON plan contract
 
 ## 1. Scene Contract schema
 
@@ -217,13 +219,49 @@ Use one of four modes:
 
 Allow place/date/time/weather only when provided by the user or visibly reliable in the source. Never infer exact metadata from appearance.
 
-## 10. JSON plan contract
+## 10. Transformation-floor fields
+
+Describe the intended visible structure before generation:
+
+- `route_strength`: `restrained`, `balanced`, or `bold`.
+- `structural_operations`: one or more named operations from the route specification. Do not count texture or color treatment.
+- `graphic_field_share`: approximate canvas share occupied by visibly designed source-derived fields, gaps, margins, or illustration rather than continuous photography.
+- `boundary_crossing`: whether a source-derived contour, fragment, or field crosses an internal composition boundary.
+- `continuous_full_frame_photo`: set `false` unless a restrained documentary request explicitly needs an edge-to-edge photographic base.
+- `texture_only`: always set `false`; a plan that expects texture-only differentiation is invalid.
+
+The transformation floor protects against the opposite failure from context loss: keeping so many source pixels that the result is only the original photograph with a filter.
+
+## 11. Source-information translation fields
+
+Every major non-photographic field needs a traceable source relationship. Describe each mapping with:
+
+- `field_name`: the designed destination field or mark in the output;
+- `source_region`: the exact visible source evidence that supplies its information;
+- `translation_mode`: one of `contour`, `silhouette`, `rhythm`, `same-source-crop`, `stencil`, `material-continuation`, `value-continuation`, `reflection-hatch`, `detail-repetition`, or `cut-paper`;
+- `continuity_anchor`: the visible edge, axis, color/value relation, direction, overlap, or material behavior that joins the field back to the photographic anchor.
+
+Set `generic_substitutions` to `false`. Generic arrows, circles, diagram marks, botanical ornaments, or detached geometry cannot replace source evidence. Set `untranslated_blank_share` to the approximate fraction of the graphic/non-photo area that carries only breathing room. Keep it at or below 0.70 for Documentary Editorial, 0.50 for Multi-frame Joiner, and 0.40 for Graphic Scene Poster or Gathered Collage.
+
+Minimum field mappings:
+
+| Route | Restrained | Balanced | Bold |
+| --- | ---: | ---: | ---: |
+| Documentary Editorial | 1 | 1 | 2 |
+| Multi-frame Joiner | 1 | 1 | 2 |
+| Graphic Scene Poster | 1 | 2 | 3 |
+| Gathered Collage | 1 | 2 | 3 |
+
+Paper color, grain, halftone, torn fibers, or ink texture alone does not satisfy a mapping. The translated field must retain a visible fact, rhythm, contour, material cue, or relationship from the source.
+
+## 12. JSON plan contract
 
 Use this shape with `scripts/lint_scene_plan.py`:
 
 ```json
 {
   "route": "documentary-editorial",
+  "route_strength": "balanced",
   "reference_mode": "edit-source",
   "scene_core": {
     "identity_anchors": ["...", "...", "..."],
@@ -252,6 +290,28 @@ Use this shape with `scripts/lint_scene_plan.py`:
   "palette_mode": "native",
   "abstraction_level": "light",
   "photo_share": 0.82,
+  "transformation_floor": {
+    "structural_operations": [
+      "asymmetric-grid",
+      "crop-scale-shift"
+    ],
+    "graphic_field_share": 0.12,
+    "boundary_crossing": false,
+    "continuous_full_frame_photo": false,
+    "texture_only": false
+  },
+  "information_translation": {
+    "fields": [
+      {
+        "field_name": "wall-derived side margin",
+        "source_region": "cool white wall and window mullions",
+        "translation_mode": "material-continuation",
+        "continuity_anchor": "window verticals continue across the internal crop edge"
+      }
+    ],
+    "untranslated_blank_share": 0.45,
+    "generic_substitutions": false
+  },
   "introduced_hues": 0,
   "typography": {
     "mode": "none",

@@ -19,6 +19,8 @@ Follow this equation:
 source photo
 → lock irreplaceable Scene Core
 → choose a composition route
+→ set route strength and a visible transformation floor
+→ map source information into every designed field
 → choose field, palette, abstraction, material, and memory modules
 → generate and compare against the lock
 ```
@@ -82,12 +84,40 @@ Use one route as the composition grammar. Add at most one secondary technique.
 
 | Route | Default source-photo presence | Prefer when | Main transformation |
 | --- | ---: | --- | --- |
-| **Documentary Editorial** | 65–100% | context is fragile; interiors, cafés, white rooms, subtle light | quiet grid, crop, margins, small type |
-| **Multi-frame Joiner** | 55–100% across source fragments | cutting is welcome; place detail, movement, multiple viewpoints | overlapping source crops, time/space fragmentation |
-| **Graphic Scene Poster** | 40–80% | travel, architecture, landscape, signage, strong geometry | landmark anchor, scale shift, source-derived graphic planes |
+| **Documentary Editorial** | 65–95% | context is fragile; interiors, cafés, white rooms, subtle light | quiet grid, crop, margins, small type |
+| **Multi-frame Joiner** | 55–90% across source fragments | cutting is welcome; place detail, movement, multiple viewpoints | overlapping source crops, time/space fragmentation |
+| **Graphic Scene Poster** | 45–65% at balanced strength | travel, architecture, landscape, signage, strong geometry | landmark anchor, scale shift, source-derived graphic planes |
 | **Gathered Collage** | 25–60% | the user wants the original tactile torn-paper character | cutout, irregular tear, illustration continuation, selective print |
 
 Default to **Documentary Editorial** when uncertain. It has the lowest context-loss risk. Do not choose Gathered Collage merely because the request contains the word “zine.”
+
+## Step 2.5 — Set Route Strength and Transformation Floor
+
+Treat **context fidelity as semantic and relational fidelity, not pixel fidelity**. Keeping the place does not require keeping the source as one continuous full-frame photograph.
+
+Choose `restrained`, `balanced`, or `bold`; default to `balanced`. Use `restrained` only for fragile faces, subtle interiors, exact signage, or explicit low-change requests. Use `bold` when the user asks for clear differentiation and the Scene Lock is robust.
+
+Before generation, define a visible transformation floor:
+
+- Select at least one structural operation for `restrained`, two for `balanced`, and three for `bold`.
+- Choose operations from: asymmetric content-derived grid, crop/scale shift, same-source fragment reassembly, source-derived graphic plane, boundary crossing, negative-space reallocation, directional cut, source-detail repetition, or subject cutout.
+- For a balanced **Graphic Scene Poster**, reserve at least 25% of the canvas for visibly graphic, source-derived fields and keep 45–65% truthful photography. Increase the graphic field to at least 35% for `bold`.
+- Require a source contour, fragment, or plane to cross one internal boundary in balanced/bold Graphic Scene Poster and Gathered Collage routes.
+- Reject any result that remains a continuous full-frame photograph changed only by color grading, halftone, grain, saturation, or another surface treatment.
+
+Use the **anchored synthesis** for landscape, architecture, and travel by default: keep one place-defining photographic anchor; organize it with an asymmetric grid derived from the source; add one source-derived plane; then choose either one same-source fragment or one directional cut. Keep halftone or overprint localized and optional.
+
+## Step 2.75 — Build the Source-Information Translation Map
+
+Do not treat the non-photographic area as decoration. For every paper field, graphic plane, illustrated continuation, connective gap, or repeated mark, record:
+
+- **Source region:** the exact visible wall, sky, water, foliage, reflection, fabric, sign, contour, or object group being translated.
+- **Translation mode:** `contour`, `silhouette`, `rhythm`, `same-source-crop`, `stencil`, `material-continuation`, `value-continuation`, `reflection-hatch`, `detail-repetition`, or `cut-paper`.
+- **Continuity anchor:** the edge, axis, color/value relationship, overlap, direction, or material behavior that reconnects the translated field to the photograph.
+
+At `balanced` or `bold`, every major designed field must carry at least one recognizable source cue. Calm breathing room may remain, but untranslated blank space must not dominate Graphic Scene Poster or Gathered Collage. Paper color, grain, halftone, or torn texture alone does not count as translated information.
+
+Never replace source information with generic arrows, circles, botanical ornaments, diagram marks, decorative geometry, or invented symbols. A mark is allowed only when its shape, direction, rhythm, or semantic owner is visibly traceable to the source.
 
 ## Step 3 — Resolve Independent Modules
 
@@ -140,14 +170,15 @@ Make text optional. Prefer no text over invented metadata.
 
 ## Step 4 — Compile the Generation Prompt
 
-Write six compact blocks:
+Write seven compact blocks:
 
 1. **Reference and route:** state that the attached source photo is authoritative; name the formal route without artist names.
 2. **Scene Lock:** state every identity anchor, spatial invariant, context-bearing region, palette role, light cue, material signature, density trait, and memory cue that must remain.
-3. **Allocation and operations:** specify photographic presence, crop/fragments, hierarchy, eye path, flexible zones, and any cutout or boundary crossing.
-4. **Field, palette, and abstraction:** specify modes, source derivation, preserve/compress/omit decisions, and exact introduced-hue limit.
-5. **Material and text:** specify localized print behavior, edge treatment, exact wording, placement, hierarchy, or explicit absence of text.
-6. **Hard constraints:** prohibit invented scenery, generic background replacement, global filters, unrelated motifs, damaged faces, illegible text, mockups, watermarks, and unintended 3D depth.
+3. **Allocation and operations:** specify route strength, photographic presence, graphic-field share, structural operations, crop/fragments, hierarchy, eye path, flexible zones, and boundary crossing.
+4. **Information translation:** map every major non-photo field to its source region, translation mode, and continuity anchor; state the untranslated blank-space limit.
+5. **Field, palette, and abstraction:** specify modes, source derivation, preserve/compress/omit decisions, and exact introduced-hue limit.
+6. **Material and text:** specify localized print behavior, edge treatment, exact wording, placement, hierarchy, or explicit absence of text.
+7. **Hard constraints:** prohibit invented scenery, generic background replacement, global filters, unrelated motifs, damaged faces, illegible text, mockups, watermarks, and unintended 3D depth.
 
 Use only instructions that can become visible pixels. Describe formal properties instead of naming artists, studios, publications, or copyrighted works.
 
@@ -168,13 +199,15 @@ Use only instructions that can become visible pixels. Describe formal properties
 - **Decorative color:** switch to native or source-amplification; remove detached accents.
 - **Excessive blank space:** extend the context-bearing background or source-colored field.
 - **Weak transformation:** keep the Scene Lock, then strengthen route-specific crop, scale, overlap, or hierarchy.
+- **Texture-only result:** break the continuous full-frame photograph, restore the required graphic-field share, and execute the missing structural operations; keep all Scene Locks unchanged.
+- **Empty or generic field:** restore information from the displaced source region using a named translation mode and reconnect it through a visible continuity anchor; remove invented arrows, circles, ornaments, or diagram marks.
 - **Too many effects:** keep one primary material process and remove the rest.
 - **Damaged person or landmark:** restore truthful source detail and reduce abstraction locally.
 - **Text failure:** restore exact wording, spelling, hierarchy, and placement; remove invented metadata.
 
 ## Hard Avoids
 
-Avoid generic cream replacement, fixed 3:5 output when another ratio fits, mandatory high-chroma accents, automatic 60–80% detail deletion, global RISO/Xerox filters, empty paper that erases place, arbitrary geometric stickers, unrelated motifs, invented landmarks, beautified or sanitized lived-in rooms, fake metadata, multiple competing print processes, uniform tear frames, heavy drop shadows, curled paper, scrapbook depth, glossy mockups, cinematic depth of field, AI smoothing, illegible faces, misspelled text, logos, CTAs, and watermarks.
+Avoid generic cream replacement, fixed 3:5 output when another ratio fits, mandatory high-chroma accents, automatic 60–80% detail deletion, global RISO/Xerox filters, empty paper that erases place, generic arrows or diagram symbols, arbitrary geometric stickers, unrelated botanical ornaments, invented landmarks, beautified or sanitized lived-in rooms, fake metadata, multiple competing print processes, uniform tear frames, heavy drop shadows, curled paper, scrapbook depth, glossy mockups, cinematic depth of field, AI smoothing, illegible faces, misspelled text, logos, CTAs, and watermarks.
 
 Keep cutouts, irregular crops, fragmentation, torn fibers, boundary crossing, source-shape continuation, hierarchy, paper tactility, and minor print imperfection available as techniques rather than mandatory signatures.
 
@@ -188,15 +221,7 @@ Return the generated image plus one compact Chinese rationale by default. State:
 
 Return prompts, Scene Contracts, or detailed route notes only when requested.
 
-After successful generation, preserve the original source attribution outside the image as a visually quiet line:
-
-`若公开分享，欢迎标注：Visual Skill by @Zeejay0`
-
-Also preserve the original project notice outside the image during the first three successful generations in a conversation:
-
-`作者自己开发的网站已上线：https://zeejayzine.com/。欢迎使用（接入GPT5.6+image2顶流模型，国内环境可用）`
-
-Do not place either line inside the image. Omit a line only when the user explicitly asks for no credit or promotional notice.
+Do not append promotional notices, website advertisements, or attribution boilerplate to ordinary generation replies. Keep license and source attribution in the repository documentation rather than repeating them in user-facing output.
 
 ## Final Quality Gate
 
@@ -208,6 +233,10 @@ Do not return the image unless all critical checks pass:
 - Do background base, light temperature, material signatures, and density character remain coherent with the source?
 - Were meaningful details preserved and only redundant detail compressed?
 - Is the chosen route visibly distinct and internally consistent?
+- Does the result meet the selected route strength and transformation floor rather than relying on a surface filter?
+- At thumbnail scale, is it visibly a designed editorial composition rather than the original photograph with texture?
+- Can every major non-photographic field and graphic mark be traced to a named source region through a visible continuity anchor?
+- Is untranslated blank space subordinate, with no generic symbol standing in for missing scene information?
 - Were field tone, palette, abstraction, material, and text chosen independently from the source?
 - Is any introduced hue source-justified and limited to one?
 - Is the source photo used as a reference rather than reconstructed from prose?

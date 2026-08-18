@@ -1,5 +1,6 @@
 {
   "route": "graphic-scene-poster",
+  "route_strength": "balanced",
   "reference_mode": "edit-source",
   "scene_core": {
     "identity_anchors": [
@@ -59,6 +60,36 @@
   "palette_mode": "source-amplification",
   "abstraction_level": "medium",
   "photo_share": 0.58,
+  "transformation_floor": {
+    "structural_operations": [
+      "asymmetric-grid",
+      "crop-scale-shift",
+      "source-derived-plane",
+      "boundary-crossing"
+    ],
+    "graphic_field_share": 0.30,
+    "boundary_crossing": true,
+    "continuous_full_frame_photo": false,
+    "texture_only": false
+  },
+  "information_translation": {
+    "fields": [
+      {
+        "field_name": "enlarged sky-ridge plane",
+        "source_region": "hazy blue ridge and single cloud opening",
+        "translation_mode": "value-continuation",
+        "continuity_anchor": "the real ridge contour crosses from the photo into the graphic plane"
+      },
+      {
+        "field_name": "compressed city base",
+        "source_region": "warm gray roof repetition around the church tower",
+        "translation_mode": "rhythm",
+        "continuity_anchor": "roof angles converge on the same tower-to-mountain axis"
+      }
+    ],
+    "untranslated_blank_share": 0.3,
+    "generic_substitutions": false
+  },
   "introduced_hues": 0,
   "typography": {
     "mode": "none",

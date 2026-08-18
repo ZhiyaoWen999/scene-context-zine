@@ -44,7 +44,32 @@ Photocollage treats photography as graphic material that can be altered, replica
 
 Use this research as a high-energy option within Graphic Scene Poster or Multi-frame Joiner.
 
-## 6. Print process as material, not filter
+## 6. Grid disruption and scale-varying halftone
+
+New Wave typography demonstrates how an underlying grid can be made energetic through collisions of horizontal, vertical, and diagonal structure, abrupt scale changes, and halftone that changes scale rather than coating everything uniformly. The transferable operator is: **keep a content-derived grid legible, then disrupt one axis or one graphic field; treat halftone as local hierarchy, never as the transformation itself**.
+
+- Source: [Museum für Gestaltung Zürich — Wolfgang Weingart: Typography in Context](https://museum-gestaltung.ch/en/article/wolfgang-weingart-typography-context)
+- Context: [Cooper Hewitt — New Wave Graphics](https://exhibitions.cooperhewitt.org/willismith/williwear-new-wave-graphics/)
+
+Use this research as an energy and material layer, not as the primary route.
+
+## 7. Photography contained by flat information fields
+
+Modern information design shows how a photograph can remain factual while being tightly isolated, scaled, and counterweighted by flat fields or patterns. The transferable operator is: **contain the truthful photographic unit, then assign the surrounding field a clear information or directional job**.
+
+- Source: [Cooper Hewitt — How Posters Work](https://www.cooperhewitt.org/2015/02/05/cooper-hewitt-to-present-special-exhibition-how-posters-work/)
+
+Use this research for Graphic Scene Poster when the source needs a clearer photograph-to-field boundary.
+
+## 8. Transparent overprint as a trace
+
+Layered print systems show that transparent color, repetition, and overprinting can turn source detail into a measured rhythm. The transferable operator is: **repeat or overprint one source-derived module while leaving the photographic anchor natural**.
+
+- Source: [Stedelijk Museum Amsterdam — Karel Martens](https://www.stedelijk.nl/en/news/karel-martens-eng)
+
+Use this only as an optional secondary material trace.
+
+## 9. Print process as material, not filter
 
 RISO-like stencil duplication is useful for bold color, layering, texture, stencilling, and color mixing. Its transferable operator is: **apply a print behavior to one source-derived layer instead of forcing the whole image through a global effect**.
 
@@ -52,19 +77,19 @@ RISO-like stencil duplication is useful for bold color, layering, texture, stenc
 
 Use this research as a selective material module in any route.
 
-## 7. Contact sheet and memory archive
+## 10. Contact sheet and memory archive
 
 A contact-sheet or photobook page shifts the goal from a single poster toward a visual record: whole scene, detail, person, material, light, and supplied metadata can form a sequence. The transferable operator is: **turn one photograph into a small archive of attention without fabricating additional moments**.
 
 Use this as the Contact-sheet memory strip secondary technique.
 
-## 8. Travel diary and ephemera
+## 11. Travel diary and ephemera
 
 Place, date, weather, ticket fragments, menus, maps, and a remembered sentence can make a page more specific when they are real. The transferable operator is: **treat verified metadata and physical traces as part of the scene rather than as decorative pseudo-editorial labeling**.
 
 Use this as the Ephemera layer secondary technique. Ask for missing facts only when the user specifically wants factual metadata and it cannot be read from the source; otherwise omit them.
 
-## 9. Synthesis rules
+## 12. Synthesis rules
 
 Combine references by problem, not by surface resemblance:
 
@@ -74,5 +99,15 @@ Combine references by problem, not by surface resemblance:
 - Need more energy → source-axis scale shifts and dynamic recombination.
 - Need tactile print character → one localized source-derived print layer.
 - Need travel memory rather than poster → contact-sheet or ephemera layer with verified metadata.
+
+For the default **anchored synthesis**, use the traditions as distinct layers:
+
+1. photographic anchor + scale shift;
+2. content-derived asymmetric grid;
+3. one same-source fragment or directional recombination;
+4. one bounded flat field;
+5. optional localized halftone or transparent overprint.
+
+The first two layers are the backbone. Choose one operation from layer 3, require layer 4 for balanced/bold Graphic Scene Poster, and keep layer 5 optional. This prevents a pastiche of every reference at once.
 
 Never place historical names in a generation prompt. Encode crop, scale, grid, overlap, material, color, and preservation behavior directly.

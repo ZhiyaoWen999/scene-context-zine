@@ -6,7 +6,7 @@
 
 核心变化只有一句话：
 
-> 先锁定不可丢失的场景 DNA，再选择设计语言。
+> 先锁定不可丢失的场景 DNA，再强制完成足够可见的构图变化。
 
 这次重构只聚焦原项目的“实景拼贴”路径；`scene-distillation-zine-v1-3` 本来就以脱离原照片、重新创作为目标，因此没有被并入。新 Skill 名称不同，可与原有两个 Skill 并存，不会覆盖旧版。
 
@@ -18,6 +18,10 @@
 - 默认轻度抽象；不再自动删除 60–80% 细节。
 - RISO、Xerox、撕纸和纸纤维变成局部材料，而不是全局滤镜。
 - 地点、日期、时间、菜单、票据与地图可作为真实记忆线索，不再一律排除。
+- `balanced` 默认至少执行两种结构操作；`bold` 至少三种。
+- 如果结果只是原图加调色、网点、颗粒或滤镜，会被直接判为失败。
+- 每块主要非摄影区域都必须说明“来自原图哪里、如何转换、怎样接回照片”；空纸色和纹理本身不算信息。
+- 禁止用无来源的箭头、圆形、植物装饰或图解符号代替被移除的场景内容。
 
 ## 架构
 
@@ -36,6 +40,18 @@ PRIMARY ROUTE（四选一）
 ├── Graphic Scene Poster
 └── Gathered Collage
           ↓
+ROUTE STRENGTH + TRANSFORMATION FLOOR
+├── restrained / balanced / bold
+├── structural operations minimum
+├── source-derived graphic-field share
+└── reject texture-only full-frame result
+          ↓
+SOURCE-INFORMATION TRANSLATION
+├── source region
+├── translation mode
+├── continuity anchor
+└── untranslated blank-space limit
+          ↓
 INDEPENDENT MODULES
 ├── field tone
 ├── palette
@@ -48,10 +64,22 @@ INDEPENDENT MODULES
 
 | 路线 | 适合 | 照片保留 | 主要变化 |
 | --- | --- | ---: | --- |
-| Documentary Editorial | 咖啡馆、室内、白色空间、细腻光线 | 65–100% | 网格、留边、轻裁切、小字 |
-| Multi-frame Joiner | 旅行、街道、复杂背景、动作 | 55–100% | 多个源照片片段、重叠、时间/视角变化 |
-| Graphic Scene Poster | 建筑、风景、地标、招牌 | 40–80% | 尺度变化、源自现场的图形平面、明确层级 |
+| Documentary Editorial | 咖啡馆、室内、白色空间、细腻光线 | balanced 65–85% | 网格、留边、轻裁切、小字 |
+| Multi-frame Joiner | 旅行、街道、复杂背景、动作 | balanced 55–80% | 多个源照片片段、重叠、时间/视角变化 |
+| Graphic Scene Poster | 建筑、风景、地标、招牌 | balanced 45–65% | 尺度变化、源自现场的图形平面、明确层级 |
 | Gathered Collage | 想保留原来的手撕纸刊气质 | 25–60% | 人物切出、非规则撕边、插画续接、选择性印刷 |
+
+## 融合后的默认视觉骨架
+
+新版把历史参考转成形式操作，不在生图 Prompt 中直接写艺术家姓名：
+
+1. 保留一个足够大的地点摄影锚点；
+2. 由地平线、道路、立面、倒影或人物视线生成非对称网格；
+3. 把一个可变区域转成占据明确面积的源色图形场；
+4. 选择一次同源片段尺度变化或沿现场轴线的方向性切割；
+5. 网点、干墨或透明叠印只作为局部材料痕迹。
+
+其中前两项负责“仍是这个地方”，第三、四项负责“明显不是原图”，第五项可有可无。
 
 ## 安装
 
@@ -77,6 +105,14 @@ cp -R ./.agents/skills/scene-context-zine ~/.agents/skills/
 
 ## 使用
 
+这个 Skill 有三层选择，不是一个混在一起的“模式”数字：
+
+- **4 种操作模式**：直接生成、路线预览、只输出 Prompt / Scene Contract、指定路线生成。
+- **4 条视觉路线**：Documentary Editorial、Multi-frame Joiner、Graphic Scene Poster、Gathered Collage。
+- **3 档变化强度**：`restrained`、`balanced`（默认）、`bold`。
+
+路线与强度可以组合，但它们是按原图自适应的视觉规则，不是 12 个固定滤镜预设。
+
 直接生成：
 
 ```text
@@ -93,6 +129,12 @@ cp -R ./.agents/skills/scene-context-zine ~/.agents/skills/
 
 ```text
 用 $scene-context-zine 的 Multi-frame Joiner 路线处理这张街景；保留店招、路面颜色和人物方向。
+```
+
+指定强度与信息转换：
+
+```text
+用 $scene-context-zine 的 Gathered Collage + bold 处理这张照片。保留人物和环境关系；杏白区域不要留空，把原图的树影、湖面反光和衣料轮廓转换进去，不要添加无来源箭头或装饰符号。
 ```
 
 只输出 Prompt / Scene Contract：
@@ -131,7 +173,7 @@ scene-context-zine/
 
 ## 结构校验
 
-项目附带四份有效 Scene Plan 和一份故意失败的回归样例。可用标准 Python 运行：
+项目附带四份有效 Scene Plan，以及“泛化风格”“仅加纹理”和“无来源图形替代”三类故意失败的回归样例。可用标准 Python 运行：
 
 ```bash
 python ./.agents/skills/scene-context-zine/scripts/lint_scene_plan.py \
@@ -141,7 +183,7 @@ python ./.agents/skills/scene-context-zine/scripts/lint_scene_plan.py \
   ./tests/fixtures/04-gathered-collage.json
 ```
 
-校验器会检查 Scene Core 是否完整、是否真的引用原图、照片占比是否落在路线护栏内、是否凭空增加颜色，以及最终提示词是否用艺术家姓名代替可见形式描述。
+校验器会检查 Scene Core 是否完整、是否真的引用原图、照片占比是否落在路线/强度护栏内、结构操作和图形场是否达到变形下限、每块设计区域是否具有来源—转换—连续性映射、是否出现无来源替代符号、是否凭空增加颜色，以及最终提示词是否用艺术家姓名代替可见形式描述。
 
 ## 来源与修改声明
 
@@ -150,6 +192,7 @@ python ./.agents/skills/scene-context-zine/scripts/lint_scene_plan.py \
 - 重构基线：commit `eae9a62e20cb570c0adabc94cb189b1c91b7be99`（2026-08-17）。
 - Context-first 重构与维护：**zhiyaowen**。
 - 本项目中的 `scene-context-zine`、测试与本 README 均为 2026-08-18 的修改版本，不是官方上游版本。
+- 来源与许可声明仅保留在仓库文档中；普通生图回复不自动附加宣传语或署名套话。
 - 原作者网站：[zeejayzine.com](https://zeejayzine.com/)。
 
 ## License

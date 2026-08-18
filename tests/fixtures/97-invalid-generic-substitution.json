@@ -1,0 +1,93 @@
+{
+  "route": "graphic-scene-poster",
+  "route_strength": "balanced",
+  "reference_mode": "edit-source",
+  "scene_core": {
+    "identity_anchors": [
+      "central mountain",
+      "dark forest band",
+      "lake reflection"
+    ],
+    "spatial_invariants": [
+      "the central mountain remains aligned above its lake reflection"
+    ],
+    "context_bearing_regions": [
+      "storm-cloud mass and mountain-to-lake transition"
+    ],
+    "environmental_palette": {
+      "background_base": "violet storm clouds",
+      "midtone": "cool blue lake",
+      "dark_anchor": "deep green forest",
+      "light_temperature": "warm alpenglow against cool storm light",
+      "meaningful_accent": "coral mountain reflection"
+    },
+    "light_time": [
+      "late warm light on the mountain under cool storm clouds"
+    ],
+    "material_signatures": [
+      "snow-streaked rock",
+      "still reflective water",
+      "dense evergreen foliage"
+    ],
+    "density_character": "monumental with a dense vegetation edge",
+    "memory_cues": [
+      "coral reflection directly below the central mountain"
+    ],
+    "detail_map": {
+      "preserve": [
+        "mountain silhouette and reflection alignment"
+      ],
+      "compress": [
+        "repeated cloud and foliage detail"
+      ],
+      "omit": [
+        "tiny water specks"
+      ],
+      "do_not_invent": [
+        "text, people, buildings, extra peaks"
+      ]
+    },
+    "flexible_zones": [
+      "upper cloud texture and lower lake surface"
+    ]
+  },
+  "field_tone_mode": "source-tone",
+  "palette_mode": "native",
+  "abstraction_level": "medium",
+  "photo_share": 0.58,
+  "transformation_floor": {
+    "structural_operations": [
+      "asymmetric-grid",
+      "source-derived-plane",
+      "boundary-crossing"
+    ],
+    "graphic_field_share": 0.3,
+    "boundary_crossing": true,
+    "continuous_full_frame_photo": false,
+    "texture_only": false
+  },
+  "information_translation": {
+    "fields": [
+      {
+        "field_name": "generic directional arrow",
+        "source_region": "storm-cloud direction",
+        "translation_mode": "contour",
+        "continuity_anchor": "arrow points toward the mountain"
+      },
+      {
+        "field_name": "generic decorative circle",
+        "source_region": "coral mountain reflection",
+        "translation_mode": "stencil",
+        "continuity_anchor": "circle overlaps the lake edge"
+      }
+    ],
+    "untranslated_blank_share": 0.3,
+    "generic_substitutions": true
+  },
+  "introduced_hues": 0,
+  "typography": {
+    "mode": "none",
+    "text": ""
+  },
+  "final_generation_prompt": "Edit the attached source as a graphic scene poster while replacing the source directions with a generic arrow and decorative circle."
+}

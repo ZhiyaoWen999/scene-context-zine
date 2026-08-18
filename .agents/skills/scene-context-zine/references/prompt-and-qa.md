@@ -16,13 +16,16 @@ Compile one decisive prompt. Replace brackets with source-specific observations;
 
 ```text
 [REFERENCE AND ROUTE]
-Edit the attached source photograph; it is the authoritative visual reference. Build a [route] composition at [ratio chosen from source/use]. Preserve photographic truth and do not recreate the scene from prose.
+Edit the attached source photograph; it is the authoritative visual reference. Build a [route] composition at [ratio chosen from source/use] with [restrained/balanced/bold] route strength. Preserve photographic truth and do not recreate the scene from prose.
 
 [SCENE LOCK]
 Keep these identity anchors recognizable: [3–5 anchors]. Preserve these spatial relationships: [invariants]. Keep these context-bearing background regions: [regions and minimum visible form]. Preserve the environmental palette: background [base], mid-tone [midtone], dark anchor [dark], light [temperature/direction], source accent [accent or none]. Preserve [materials], the [density character] character, and these memory cues: [cues].
 
 [ALLOCATION AND OPERATIONS]
-Keep approximately [photo share] as truthful source photography. [Describe main anchor, crops/fragments, hierarchy, eye path, and boundary operations.] Transform only these flexible zones: [zones]. Keep [preserve list]; compress [compress list]; omit [omit list]; invent none of [do-not-invent list].
+Keep approximately [photo share] as truthful source photography and reserve approximately [graphic-field share] for visibly source-derived graphic structure. Execute these structural operations: [operation names plus exact source regions]. [Describe main anchor, crops/fragments, hierarchy, eye path, and boundary operations.] Transform only these flexible zones: [zones]. Keep [preserve list]; compress [compress list]; omit [omit list]; invent none of [do-not-invent list].
+
+[INFORMATION TRANSLATION]
+Map every major non-photographic field to the source: [field name] translates [exact source region] through [translation mode] and reconnects through [continuity anchor]; [repeat for each field]. Keep untranslated breathing room below [route-specific limit]. Every graphic mark must have a visible source owner; use no generic substitutions.
 
 [FIELD, PALETTE, ABSTRACTION]
 Use [field-tone mode] derived from [source region/material]. Use [palette mode] and [zero/one] introduced hue. [If one hue: exact relationship, source-derived position/contour, and function.] Use [light/medium/high] abstraction while keeping every Scene Lock readable.
@@ -31,7 +34,7 @@ Use [field-tone mode] derived from [source region/material]. Use [palette mode] 
 Use [one primary material treatment] only in [localized area], with flat scanned behavior and no mockup depth. [Text mode: no text / reproduce exact wording “…” / source-grounded phrase “…”]. Place text [location/hierarchy/treatment] and keep spelling exact.
 
 [HARD CONSTRAINTS]
-Do not replace the background with generic cream or blank paper. Do not change light temperature, sanitize lived-in detail, invent objects or metadata, add unrelated graphics, apply a global print filter, damage faces or landmarks, create heavy paper shadows, add logos or watermarks, or use artist/publication names as style shortcuts.
+Do not replace the background with generic cream or blank paper. Do not leave a continuous full-frame photograph changed only by color, saturation, halftone, grain, or texture. Do not let a major paper or graphic field carry only color or texture. Do not change light temperature, sanitize lived-in detail, invent objects or metadata, add generic arrows, circles, diagram marks, decorative geometry, or unrelated motifs, apply a global print filter, damage faces or landmarks, create heavy paper shadows, add logos or watermarks, or use artist/publication names as style shortcuts.
 ```
 
 Write source facts before style adjectives. Use one sentence per critical lock when the image model tends to ignore dense lists.
@@ -55,7 +58,7 @@ Assemble three to nine overlapping crops from the same source photograph. Keep t
 ### Graphic Scene Poster
 
 ```text
-Keep one landmark or spatial axis as the photographic anchor. Enlarge one source-derived plane, contour, shadow, road, sky, or sign color to create a strong directional hierarchy while preserving place identity.
+Keep one landmark or spatial axis as the photographic anchor. Derive an asymmetric grid from a real horizon, path, reflection, façade, or silhouette. Enlarge one source-derived plane and choose either one same-source scale-shifted fragment or one directional cut. Make one source form cross an internal boundary while preserving place identity.
 ```
 
 ### Gathered Collage
@@ -76,6 +79,7 @@ Use short, failure-specific constraints. Do not paste the entire list when it wo
 - damaged faces, hands, signs, or landmarks;
 - illegible supplied text, logos, CTAs, and watermarks;
 - mockup framing or unintended 3D paper depth.
+- graphic marks or illustrations without a traceable source owner.
 
 ### Prohibit when relevant
 
@@ -100,7 +104,8 @@ Compare source and result in this order:
 5. **Density:** compare whether the scene is sparse, orderly, layered, crowded, improvised, weathered, or monumental.
 6. **Memory cues:** verify supplied/visible signs, objects, gestures, or metadata.
 7. **Transformation:** confirm that the selected route is visible and not merely a texture filter.
-8. **Artifacts:** inspect faces, hands, text, repeated fragments, seams, and paper depth.
+8. **Information translation:** trace every major non-photo field to a named source region, visible translation mode, and continuity anchor; reject generic substitutions.
+9. **Artifacts:** inspect faces, hands, text, repeated fragments, seams, and paper depth.
 
 Pass both normal-scale and thumbnail-scale review. Thumbnail review checks identity and hierarchy; normal-scale review checks factual integrity and artifacts.
 
@@ -116,6 +121,8 @@ Score for diagnosis, but apply critical failures first.
 - background base or light temperature contradicts the source;
 - a person, sign, place, or supplied text is materially falsified;
 - invented factual metadata appears.
+- a balanced/bold result remains a continuous full-frame photograph whose only visible changes are color or surface effects.
+- a balanced/bold Graphic Scene Poster or Gathered Collage replaces major source regions with empty paper, texture-only fields, or generic marks.
 
 ### Score out of 100
 
@@ -127,12 +134,14 @@ Score for diagnosis, but apply critical failures first.
 | Palette and light | 10 | five roles remain coherent |
 | Material and density | 10 | source character remains, no sanitization |
 | Route clarity | 15 | selected composition grammar is unmistakable |
-| Source-derived transformation | 10 | operations derive from real shapes/relationships |
+| Source-derived transformation | 10 | operations and every major non-photo field derive from traceable source evidence |
 | Restraint and coherence | 5 | one primary material treatment, no effect pileup |
 | Typography/facts | 5 | exact or absent; no invention |
 | Technical integrity | 5 | no face, hand, seam, text, or mockup artifact |
 
 Require 80 or more and no critical failure. Treat 80–89 as pass with caution; 90 or more as strong.
+
+For `balanced` and `bold`, score Route clarity as zero if the structural-operation minimum is not visibly met. Texture, grain, and color changes cannot earn structural-operation credit.
 
 ## 6. Targeted regeneration
 
@@ -160,6 +169,18 @@ Keep hierarchy and crop. Restore [semantic objects] and the original [layered/cr
 
 ```text
 Preserve all Scene Locks. Strengthen only the [route] grammar by [larger crop contrast / clearer fragment overlap / stronger source-derived plane / more legible torn handoff]. Add no new color, texture, or scenery.
+```
+
+### Reject texture-only output
+
+```text
+Preserve every Scene Lock. Break the continuous full-frame photograph and meet the planned [graphic-field share]. Execute [missing structural operations] using only [named flexible source regions]. Keep the existing palette and add no new texture, color, scenery, or text.
+```
+
+### Restore information-bearing fields
+
+```text
+Keep the current Scene Locks, route, hierarchy, and photographic anchor. Replace the empty or generic [field/mark] with a translation of [exact source region] using [contour/rhythm/material continuation/etc.]. Reconnect it through [specific edge, axis, value, direction, overlap, or material continuity]. Remove generic arrows, circles, ornaments, and all marks without a source owner; add no new scenery or hue.
 ```
 
 ### Remove style residue

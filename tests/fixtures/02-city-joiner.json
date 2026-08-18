@@ -1,5 +1,6 @@
 {
   "route": "multi-frame-joiner",
+  "route_strength": "balanced",
   "reference_mode": "edit-source",
   "scene_core": {
     "identity_anchors": [
@@ -61,6 +62,35 @@
   "palette_mode": "source-amplification",
   "abstraction_level": "light",
   "photo_share": 0.78,
+  "transformation_floor": {
+    "structural_operations": [
+      "fragment-reassembly",
+      "crop-scale-shift",
+      "boundary-crossing"
+    ],
+    "graphic_field_share": 0.12,
+    "boundary_crossing": true,
+    "continuous_full_frame_photo": false,
+    "texture_only": false
+  },
+  "information_translation": {
+    "fields": [
+      {
+        "field_name": "connective pavement gap",
+        "source_region": "wet pavement and curved tram rail",
+        "translation_mode": "reflection-hatch",
+        "continuity_anchor": "rail direction and reflected light continue between the lower fragments"
+      },
+      {
+        "field_name": "upper façade strip",
+        "source_region": "weathered stone windows and vertical blue sign",
+        "translation_mode": "rhythm",
+        "continuity_anchor": "window spacing and the sign vertical align with the photographic fragments"
+      }
+    ],
+    "untranslated_blank_share": 0.35,
+    "generic_substitutions": false
+  },
   "introduced_hues": 0,
   "typography": {
     "mode": "none",
