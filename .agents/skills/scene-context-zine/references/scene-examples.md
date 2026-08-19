@@ -27,7 +27,7 @@ Use these examples as decision patterns, not templates. Replace every observatio
 
 ### Best route
 
-Choose Documentary Editorial first. Use raw-photo or material-continuation field, native palette, and light abstraction. Keep 75–90% photography.
+Choose Documentary Editorial first. Use raw-photo or material-continuation field, native palette, and light abstraction. Keep 65–85% photography at balanced strength, or 80–95% when the interior is fragile enough to need restrained strength.
 
 If a margin replaces part of the room, continue the walnut material and one table/window edge into it. Brown color or paper grain alone is not enough.
 

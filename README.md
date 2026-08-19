@@ -67,7 +67,7 @@ INDEPENDENT MODULES
 | Documentary Editorial | 咖啡馆、室内、白色空间、细腻光线 | balanced 65–85% | 网格、留边、轻裁切、小字 |
 | Multi-frame Joiner | 旅行、街道、复杂背景、动作 | balanced 55–80% | 多个源照片片段、重叠、时间/视角变化 |
 | Graphic Scene Poster | 建筑、风景、地标、招牌 | balanced 45–65% | 尺度变化、源自现场的图形平面、明确层级 |
-| Gathered Collage | 想保留原来的手撕纸刊气质 | 25–60% | 人物切出、非规则撕边、插画续接、选择性印刷 |
+| Gathered Collage | 想保留原来的手撕纸刊气质 | balanced 30–50% | 人物切出、非规则撕边、插画续接、选择性印刷 |
 
 ## 融合后的默认视觉骨架
 

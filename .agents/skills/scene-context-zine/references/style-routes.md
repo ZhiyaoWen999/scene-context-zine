@@ -83,7 +83,7 @@ Let design organize the scene while the photograph remains the main evidence.
 
 ### Grammar
 
-- Keep 65–100% truthful photography.
+- Keep 65–85% truthful photography at balanced strength; use the strength table for other modes.
 - Use an asymmetrical grid, restrained crop, margin, thin alignment, or one isolated cutout.
 - Keep one dominant photograph; allow one or two small detail crops only when they strengthen memory.
 - Derive margins and field tone from the source background.
@@ -124,7 +124,7 @@ Fragment the view without replacing reality. Let multiple crops reconstruct how 
 
 ### Grammar
 
-- Keep 55–100% source photography across three to nine fragments.
+- Keep 55–80% source photography across three to nine fragments at balanced strength; use the strength table for other modes.
 - Keep the main subject intact in the largest fragment unless intentional repetition is safe.
 - Use adjacent or overlapping crops from the same source; vary scale modestly.
 - Reconstruct at least one spatial invariant across fragment edges.
@@ -209,7 +209,7 @@ Retain the tactile real-photo/illustration handoff from the original project whi
 
 ### Grammar
 
-- Keep 25–60% truthful source photography.
+- Keep 30–50% truthful source photography at balanced strength; use the strength table for other modes.
 - Preserve the core subject in the largest photo anchor or cutout.
 - Use one irregular hand-torn handoff, not a uniform frame.
 - Continue one source shape across photography and illustration.

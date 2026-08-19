@@ -82,12 +82,14 @@ Ask: **If this region vanished, would the image still feel like this exact place
 
 Use one route as the composition grammar. Add at most one secondary technique.
 
-| Route | Default source-photo presence | Prefer when | Main transformation |
+| Route | Balanced-strength photo share | Prefer when | Main transformation |
 | --- | ---: | --- | --- |
-| **Documentary Editorial** | 65–95% | context is fragile; interiors, cafés, white rooms, subtle light | quiet grid, crop, margins, small type |
-| **Multi-frame Joiner** | 55–90% across source fragments | cutting is welcome; place detail, movement, multiple viewpoints | overlapping source crops, time/space fragmentation |
-| **Graphic Scene Poster** | 45–65% at balanced strength | travel, architecture, landscape, signage, strong geometry | landmark anchor, scale shift, source-derived graphic planes |
-| **Gathered Collage** | 25–60% | the user wants the original tactile torn-paper character | cutout, irregular tear, illustration continuation, selective print |
+| **Documentary Editorial** | 65–85% | context is fragile; interiors, cafés, white rooms, subtle light | quiet grid, crop, margins, small type |
+| **Multi-frame Joiner** | 55–80% across source fragments | cutting is welcome; place detail, movement, multiple viewpoints | overlapping source crops, time/space fragmentation |
+| **Graphic Scene Poster** | 45–65% | travel, architecture, landscape, signage, strong geometry | landmark anchor, scale shift, source-derived graphic planes |
+| **Gathered Collage** | 30–50% | the user wants the original tactile torn-paper character | cutout, irregular tear, illustration continuation, selective print |
+
+Every share in this table is the `balanced` default. Read the restrained and bold ranges from the route-strength table in [style-routes.md](references/style-routes.md); it is the single source of truth that `scripts/lint_scene_plan.py` enforces.
 
 Default to **Documentary Editorial** when uncertain. It has the lowest context-loss risk. Do not choose Gathered Collage merely because the request contains the word “zine.”
 
@@ -170,7 +172,7 @@ Make text optional. Prefer no text over invented metadata.
 
 ## Step 4 — Compile the Generation Prompt
 
-Write seven compact blocks:
+Write eight compact blocks:
 
 1. **Reference and route:** state that the attached source photo is authoritative; name the formal route without artist names.
 2. **Scene Lock:** state every identity anchor, spatial invariant, context-bearing region, palette role, light cue, material signature, density trait, and memory cue that must remain.
@@ -178,9 +180,12 @@ Write seven compact blocks:
 4. **Information translation:** map every major non-photo field to its source region, translation mode, and continuity anchor; state the untranslated blank-space limit.
 5. **Field, palette, and abstraction:** specify modes, source derivation, preserve/compress/omit decisions, and exact introduced-hue limit.
 6. **Material and text:** specify localized print behavior, edge treatment, exact wording, placement, hierarchy, or explicit absence of text.
-7. **Hard constraints:** prohibit invented scenery, generic background replacement, global filters, unrelated motifs, damaged faces, illegible text, mockups, watermarks, and unintended 3D depth.
+7. **Capture integrity:** hold neutral white balance and the source light temperature, keep low-interest regions, tie grain to exposure, match one real lens, and keep material irregular at every scale.
+8. **Hard constraints:** prohibit invented scenery, generic background replacement, global filters, unrelated motifs, damaged faces, illegible text, mockups, watermarks, and unintended 3D depth.
 
 Use only instructions that can become visible pixels. Describe formal properties instead of naming artists, studios, publications, or copyrighted works.
+
+The capture-integrity block exists because image models drift in predictable directions that attack this Skill's locks specifically: whites warm toward cream and shadows go muddy brown, every region gets raised to equal saturation, grain arrives as a uniform overlay, unmotivated rim light and haze appear, background blur ignores distance, and repeated material tiles instead of varying. Naming each drift is cheaper than repairing it after generation.
 
 ## Step 5 — Generate and Compare
 
@@ -195,6 +200,7 @@ Use only instructions that can become visible pixels. Describe formal properties
 - **Generic place:** restore the missing context-bearing region and two material or memory cues.
 - **Wrong white/brown field:** replace generic paper with the source background base or material continuation.
 - **Atmosphere drift:** restore light temperature, contrast, weather/time cue, and native value range.
+- **Generative rendering drift:** restore neutral white balance, source light temperature, low-interest regions, exposure-linked grain, single-lens focus falloff, and irregular material structure; remove unmotivated rim light, haze, or golden-hour cast.
 - **Over-cleaned room:** restore semantic objects and the original density character.
 - **Decorative color:** switch to native or source-amplification; remove detached accents.
 - **Excessive blank space:** extend the context-bearing background or source-colored field.

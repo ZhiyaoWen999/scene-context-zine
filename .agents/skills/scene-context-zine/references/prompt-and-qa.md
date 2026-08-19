@@ -33,6 +33,9 @@ Use [field-tone mode] derived from [source region/material]. Use [palette mode] 
 [MATERIAL AND TEXT]
 Use [one primary material treatment] only in [localized area], with flat scanned behavior and no mockup depth. [Text mode: no text / reproduce exact wording “…” / source-grounded phrase “…”]. Place text [location/hierarchy/treatment] and keep spelling exact.
 
+[CAPTURE INTEGRITY]
+Hold neutral white balance and keep the source light temperature exactly: [warm/cool/mixed description]. Do not warm whites toward cream or push shadows toward muddy brown. Keep [named low-interest region] low in saturation and detail; do not raise every area to equal brightness, saturation, or interest. Tie any grain or print noise to exposure — denser in shadow, absent in clipped highlight — never a uniform overlay across the frame. Add no rim light, volumetric rays, atmospheric haze, or golden-hour cast that the source does not contain. Keep focus falloff consistent with one real lens; do not blur the background equally at every distance. Keep [named material] irregular at every scale rather than evenly tiled or regularly jointed.
+
 [HARD CONSTRAINTS]
 Do not replace the background with generic cream or blank paper. Do not leave a continuous full-frame photograph changed only by color, saturation, halftone, grain, or texture. Do not let a major paper or graphic field carry only color or texture. Do not change light temperature, sanitize lived-in detail, invent objects or metadata, add generic arrows, circles, diagram marks, decorative geometry, or unrelated motifs, apply a global print filter, damage faces or landmarks, create heavy paper shadows, add logos or watermarks, or use artist/publication names as style shortcuts.
 ```
@@ -157,6 +160,12 @@ Keep the current route and subject treatment. Restore [specific context region] 
 
 ```text
 Keep composition unchanged. Replace the current field with [source background base], restore [light temperature/direction], and remove the introduced wash. Preserve the source dark anchor at [location].
+```
+
+### Restore capture integrity
+
+```text
+Keep composition, route, and every Scene Lock unchanged. Correct only the rendering: restore neutral white balance and the source [warm/cool/mixed] light temperature, return whites from cream to [exact source white] and shadows from brown to [exact source dark]. Restore the low-saturation [named region] instead of raising the whole frame to equal interest. Make grain follow exposure rather than covering the frame uniformly. Remove any rim light, volumetric ray, haze, or golden-hour cast absent from the source. Match focus falloff to one lens. Restore irregular [named material] structure. Add no new color, scenery, or text.
 ```
 
 ### Restore lived-in density
