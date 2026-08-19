@@ -1,5 +1,6 @@
 {
   "route": "gathered-collage",
+  "route_strength": "balanced",
   "reference_mode": "edit-source",
   "scene_core": {
     "identity_anchors": [
@@ -61,6 +62,35 @@
   "palette_mode": "native",
   "abstraction_level": "medium",
   "photo_share": 0.48,
+  "transformation_floor": {
+    "structural_operations": [
+      "subject-cutout",
+      "boundary-crossing",
+      "source-derived-plane"
+    ],
+    "graphic_field_share": 0.34,
+    "boundary_crossing": true,
+    "continuous_full_frame_photo": false,
+    "texture_only": false
+  },
+  "information_translation": {
+    "fields": [
+      {
+        "field_name": "paper-cut reed bank",
+        "source_region": "two directional clusters of dry reeds behind the bridge",
+        "translation_mode": "cut-paper",
+        "continuity_anchor": "reed direction continues across the irregular photographic edge"
+      },
+      {
+        "field_name": "snow-to-water quiet field",
+        "source_region": "luminous snow bank above the charcoal water reflection",
+        "translation_mode": "value-continuation",
+        "continuity_anchor": "the real bridge and water horizontals join photo, snow field, and dark reflection"
+      }
+    ],
+    "untranslated_blank_share": 0.25,
+    "generic_substitutions": false
+  },
   "introduced_hues": 0,
   "typography": {
     "mode": "authored-phrase",

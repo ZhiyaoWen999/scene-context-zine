@@ -3,13 +3,15 @@
 ## Contents
 
 1. Selection rules
-2. Route A — Documentary Editorial
-3. Route B — Multi-frame Joiner
-4. Route C — Graphic Scene Poster
-5. Route D — Gathered Collage
-6. Secondary techniques
-7. Route-preview format
-8. Distinctness test
+2. Route strength and transformation floor
+3. Anchored synthesis
+4. Route A — Documentary Editorial
+5. Route B — Multi-frame Joiner
+6. Route C — Graphic Scene Poster
+7. Route D — Gathered Collage
+8. Secondary techniques
+9. Route-preview format
+10. Distinctness test
 
 ## 1. Selection rules
 
@@ -27,7 +29,46 @@ Use these signals:
 
 Define photo share as the approximate area showing truthful source photography, including repeated source crops. Treat ranges as guardrails, not quotas.
 
-## 2. Route A — Documentary Editorial
+## 2. Route strength and transformation floor
+
+Choose one strength before compiling the prompt:
+
+| Strength | Purpose | Minimum structural operations | Result must read as |
+| --- | --- | ---: | --- |
+| `restrained` | fragile context or explicit low-change request | 1 | clearly organized editorial treatment |
+| `balanced` | default | 2 | a new composition built from the source |
+| `bold` | explicit differentiation with robust locks | 3 | an unmistakable poster or collage |
+
+Count only structural operations: asymmetric content-derived grid, crop/scale shift, same-source fragment reassembly, source-derived graphic plane, boundary crossing, negative-space reallocation, directional cut, source-detail repetition, or subject cutout. Do not count color grading, grain, halftone, paper texture, saturation, or a border as structural operations.
+
+Use these photo-share guardrails by strength:
+
+| Route | Restrained | Balanced | Bold |
+| --- | ---: | ---: | ---: |
+| Documentary Editorial | 80–95% | 65–85% | 55–75% |
+| Multi-frame Joiner | 75–90% | 55–80% | 45–70% |
+| Graphic Scene Poster | 60–75% | 45–65% | 35–55% |
+| Gathered Collage | 45–60% | 30–50% | 25–40% |
+
+For balanced/bold output, do not leave one continuous edge-to-edge photograph as the whole composition. For Graphic Scene Poster, require a visibly source-derived graphic field of at least 25% at balanced and 35% at bold. For Gathered Collage, require at least 30% at balanced and 40% at bold. In Graphic Scene Poster and Gathered Collage, make one source-derived form cross an internal boundary.
+
+Every major non-photo field must remain information-bearing. Map it to one exact source region, one translation mode, and one continuity anchor. A source-colored blank may provide limited breathing room, but paper color, texture, or a generic symbol cannot stand in for the wall, water, foliage, reflection, signage, object rhythm, or contour that was displaced.
+
+**Automatic rejection:** if the composition differs from the source only through color, contrast, saturation, grain, halftone, paper texture, or another global/local surface effect, it has not met the transformation floor.
+
+## 3. Anchored synthesis
+
+Use this default fusion for landscapes, architecture, landmarks, and travel scenes. It combines several compatible design traditions as a hierarchy rather than a pile of effects:
+
+1. **Anchor:** keep one place-defining photographic subject or relationship large and truthful.
+2. **Grid:** derive an asymmetric layout from the source horizon, façade, path, reflection, gaze, or silhouette.
+3. **Field:** convert one flexible source region into a flat source-colored plane that occupies meaningful area.
+4. **Energy:** choose either one same-source fragment at a changed scale or one directional cut along a real source axis.
+5. **Material:** optionally localize one halftone, dry-ink, or transparent overprint trace to the graphic field only.
+
+Do not use every available operation. At balanced strength, use anchor + grid + field and one energy choice. At bold strength, increase crop contrast or graphic-field area before adding more texture.
+
+## 4. Route A — Documentary Editorial
 
 ### Intent
 
@@ -42,10 +83,11 @@ Let design organize the scene while the photograph remains the main evidence.
 
 ### Grammar
 
-- Keep 65–100% truthful photography.
+- Keep 65–85% truthful photography at balanced strength; use the strength table for other modes.
 - Use an asymmetrical grid, restrained crop, margin, thin alignment, or one isolated cutout.
 - Keep one dominant photograph; allow one or two small detail crops only when they strengthen memory.
 - Derive margins and field tone from the source background.
+- Carry at least one wall edge, shadow value, window rhythm, tabletop line, or other source cue into the margin; do not make the margin a color-only slab when it replaces context.
 - Prefer native palette and light abstraction.
 - Use raw-photo, source-tone, or material-continuation fields.
 - Keep type small and factual or omit it.
@@ -67,7 +109,7 @@ Use: `source-faithful editorial page`, `asymmetric grid`, `truthful photographic
 
 Do not use artist or publication names.
 
-## 3. Route B — Multi-frame Joiner
+## 5. Route B — Multi-frame Joiner
 
 ### Intent
 
@@ -82,12 +124,13 @@ Fragment the view without replacing reality. Let multiple crops reconstruct how 
 
 ### Grammar
 
-- Keep 55–100% source photography across three to nine fragments.
+- Keep 55–80% source photography across three to nine fragments at balanced strength; use the strength table for other modes.
 - Keep the main subject intact in the largest fragment unless intentional repetition is safe.
 - Use adjacent or overlapping crops from the same source; vary scale modestly.
 - Reconstruct at least one spatial invariant across fragment edges.
 - Repeat a context cue at most twice to suggest attention or time, not clone noise.
 - Allow narrow source-colored gaps, raw overlap, or a contact-sheet strip.
+- Build connective gaps from the source pavement, façade rhythm, rail direction, reflection, or another visible relationship; never insert generic arrows or diagram marks to manufacture motion.
 - Prefer native or source-amplification palette.
 - Use light to medium abstraction only in connective zones.
 
@@ -109,7 +152,7 @@ Use: `multi-frame photographic assembly`, `overlapping source crops`, `shifted a
 
 Do not request new camera angles that the source cannot support.
 
-## 4. Route C — Graphic Scene Poster
+## 6. Route C — Graphic Scene Poster
 
 ### Intent
 
@@ -123,10 +166,13 @@ Make a designed scene poster in which the landmark or spatial identity remains u
 
 ### Grammar
 
-- Keep 40–80% source photography.
+- Keep 45–65% source photography at balanced strength; use the strength table for other modes.
 - Preserve one large landmark or scene-specific photographic anchor.
-- Enlarge one source-derived plane, shadow, road, sky, sign color, or contour.
-- Use scale shift, diagonal, crop, and clear hierarchy.
+- Reserve at least 25% of the balanced canvas for source-derived graphic fields; use at least 35% at bold strength.
+- Enlarge one source-derived plane, shadow, road, sky, reflection, sign color, or contour.
+- Give each enlarged plane a visible source fact: contour, value change, material rhythm, same-source crop, or reflection structure. Color alone is insufficient.
+- Use an asymmetric grid plus at least one crop/scale shift, same-source fragment, or directional cut.
+- Make one real contour, fragment, or plane cross an internal boundary.
 - Select source-tone, material-continuation, or chromatic-stock field.
 - Prefer source amplification; allow one graphic counterpoint only when structurally necessary.
 - Use medium abstraction in flexible zones, not on the landmark.
@@ -143,12 +189,13 @@ Use the scene to generate the grid. Keep the place readable before the poster tr
 - the landmark loses its proportion or relation to the horizon;
 - travel metadata is fabricated;
 - the color field is unrelated to the scene.
+- the source still fills the canvas continuously and only receives a texture or color treatment.
 
 ### Prompt vocabulary
 
-Use: `source-derived graphic plane`, `landmark-scale photographic anchor`, `asymmetric travel poster`, `cropped photographic scale shift`, `clear directional hierarchy`.
+Use: `source-derived graphic plane`, `landmark-scale photographic anchor`, `asymmetric content-derived grid`, `cropped photographic scale shift`, `same-source fragment`, `internal boundary crossing`, `clear directional hierarchy`.
 
-## 5. Route D — Gathered Collage
+## 7. Route D — Gathered Collage
 
 ### Intent
 
@@ -162,11 +209,12 @@ Retain the tactile real-photo/illustration handoff from the original project whi
 
 ### Grammar
 
-- Keep 25–60% truthful source photography.
+- Keep 30–50% truthful source photography at balanced strength; use the strength table for other modes.
 - Preserve the core subject in the largest photo anchor or cutout.
 - Use one irregular hand-torn handoff, not a uniform frame.
 - Continue one source shape across photography and illustration.
 - Use one primary illustration grammar: silhouette, contour, field, rhythm, or cut-paper.
+- Make every major paper region carry translated source information such as reed rhythm, veil contour, window grid, reflected light, water hatch, foliage mass, or fabric fold; reserve pure blank only as subordinate breathing room.
 - Derive paper/field tone from the source; do not default to cream.
 - Default to native or source-amplification palette.
 - Localize RISO-like, photocopy, halftone, dry ink, or fiber behavior.
@@ -183,12 +231,14 @@ Keep the original strengths: figure separation, irregular crop, boundary crossin
 - illustration traces the whole photograph;
 - all complex detail is erased regardless of meaning;
 - an accent hue is added only to recreate a house style.
+- paper areas contain only grain or color while the displaced scene information disappears;
+- generic arrows, circles, leaves, or diagram symbols appear without a visible source owner.
 
 ### Prompt vocabulary
 
 Use: `truthful photographic cutout`, `single irregular fibrous handoff`, `source-shape continuation`, `selective printed layer`, `flat tactile paper collage`.
 
-## 6. Secondary techniques
+## 8. Secondary techniques
 
 Add at most one:
 
@@ -212,7 +262,7 @@ Separate one person or object and let it cross a grid, fragment, or field bounda
 
 Extend one contour, path, shadow, or material beyond the photographic edge. Do not invent new scenery.
 
-## 7. Route-preview format
+## 9. Route-preview format
 
 For each proposed route, return:
 
@@ -221,14 +271,16 @@ Route:
 Why it fits:
 Locked context:
 Photo presence:
+Route strength / transformation floor:
 Field / palette / abstraction / material:
+Information translation (source → mode → continuity):
 Main transformation:
 Main risk:
 ```
 
 Make routes materially different. Do not vary only the color.
 
-## 8. Distinctness test
+## 10. Distinctness test
 
 At thumbnail scale:
 
@@ -238,3 +290,7 @@ At thumbnail scale:
 - Gathered Collage should read as a tactile boundary between truthful photography and source-derived paper interpretation.
 
 If two routes differ only by texture, reselect their composition operations.
+
+Also reject any balanced/bold result that reads as the original full-frame photograph at thumbnail scale. Preserve the scene relationship, but visibly reallocate area, scale, and boundaries.
+
+Finally, point to the source owner of every major graphic field or mark. If one can only be described as “decorative,” remove it or translate a real source cue into that position.

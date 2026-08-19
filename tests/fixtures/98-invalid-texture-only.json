@@ -1,0 +1,91 @@
+{
+  "route": "graphic-scene-poster",
+  "route_strength": "balanced",
+  "reference_mode": "edit-source",
+  "scene_core": {
+    "identity_anchors": [
+      "central mountain",
+      "forest band",
+      "lake reflection"
+    ],
+    "spatial_invariants": [
+      "the central mountain remains aligned above its lake reflection"
+    ],
+    "context_bearing_regions": [
+      "storm-cloud mass and mountain-to-lake transition"
+    ],
+    "environmental_palette": {
+      "background_base": "violet storm clouds",
+      "midtone": "cool blue lake",
+      "dark_anchor": "deep green forest",
+      "light_temperature": "warm alpenglow against cool storm light",
+      "meaningful_accent": "coral mountain reflection"
+    },
+    "light_time": [
+      "late warm light on the mountain under cool storm clouds"
+    ],
+    "material_signatures": [
+      "snow-streaked rock",
+      "still reflective water",
+      "dense evergreen foliage"
+    ],
+    "density_character": "monumental with a dense vegetation edge",
+    "memory_cues": [
+      "coral reflection directly below the central mountain"
+    ],
+    "detail_map": {
+      "preserve": [
+        "mountain silhouette and reflection alignment"
+      ],
+      "compress": [
+        "repeated cloud and foliage detail"
+      ],
+      "omit": [
+        "tiny water specks"
+      ],
+      "do_not_invent": [
+        "text, people, buildings, extra peaks"
+      ]
+    },
+    "flexible_zones": [
+      "upper cloud texture and lower lake surface"
+    ]
+  },
+  "field_tone_mode": "raw-photo",
+  "palette_mode": "native",
+  "abstraction_level": "light",
+  "photo_share": 0.74,
+  "transformation_floor": {
+    "structural_operations": [
+      "asymmetric-grid"
+    ],
+    "graphic_field_share": 0.04,
+    "boundary_crossing": false,
+    "continuous_full_frame_photo": true,
+    "texture_only": true
+  },
+  "information_translation": {
+    "fields": [
+      {
+        "field_name": "storm-cloud field",
+        "source_region": "violet cloud bands above the central mountain",
+        "translation_mode": "value-continuation",
+        "continuity_anchor": "the cloud-band direction continues across the mountain shoulder"
+      },
+      {
+        "field_name": "lake-reflection field",
+        "source_region": "coral reflection directly below the central mountain",
+        "translation_mode": "reflection-hatch",
+        "continuity_anchor": "the vertical mountain-to-reflection axis remains continuous"
+      }
+    ],
+    "untranslated_blank_share": 0.25,
+    "generic_substitutions": false
+  },
+  "introduced_hues": 0,
+  "typography": {
+    "mode": "none",
+    "text": ""
+  },
+  "final_generation_prompt": "Keep the full-frame photograph unchanged and add halftone texture to the clouds."
+}
